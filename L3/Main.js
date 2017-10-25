@@ -1,5 +1,5 @@
-var L03_Temp;
-(function (L03_Temp) {
+var L03;
+(function (L03) {
     window.addEventListener("load", init);
     let crc2;
     let arrayX = [];
@@ -15,18 +15,18 @@ var L03_Temp;
             arrayX[i] = 200;
             arrayY[i] = 150;
         }
-        console.log(arrayX);
+        // hier Hintergrund speichern
     }
     function animate() {
         console.log("Timeout");
-        crc2.clearRect(0, 0, 400, 300);
+        crc2.clearRect(0, 0, 400, 300); // hier Hintergrund restaurieren
         for (let i = 0; i < arrayX.length; i++) {
-            arrayX[i] += Math.random() * 4 - 2;
-            arrayY[i] += Math.random() * 4 - 2;
+            arrayX[i] += Math.random() * 4 - 2; // hier experimentieren um
+            arrayY[i] += Math.random() * 4 - 2; // andere Bewegungsmuster zu finden
             crc2.fillStyle = "#ff0000";
             crc2.fillRect(arrayX[i], arrayY[i], 20, 20);
         }
         window.setTimeout(animate, 20);
     }
-})(L03_Temp || (L03_Temp = {}));
+})(L03 || (L03 = {}));
 //# sourceMappingURL=Main.js.map

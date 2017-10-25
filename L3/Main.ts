@@ -1,4 +1,4 @@
-namespace L03_Temp {
+namespace L03 {
     window.addEventListener("load", init);
     let crc2: CanvasRenderingContext2D;
     let arrayX: number[] = [];
@@ -19,16 +19,17 @@ namespace L03_Temp {
             arrayX[i] = 200;
             arrayY[i] = 150;
         }
-        console.log(arrayX);
+        
+        // hier Hintergrund speichern
     }
 
     function animate(): void {
         console.log("Timeout");
-        crc2.clearRect(0, 0, 400, 300);
+        crc2.clearRect(0, 0, 400, 300); // hier Hintergrund restaurieren
 
         for (let i: number = 0; i < arrayX.length; i++) {
-            arrayX[i] += Math.random() * 4 - 2;
-            arrayY[i] += Math.random() * 4 - 2;
+            arrayX[i] += Math.random() * 4 - 2; // hier experimentieren um
+            arrayY[i] += Math.random() * 4 - 2; // andere Bewegungsmuster zu finden
             crc2.fillStyle = "#ff0000";
             crc2.fillRect(arrayX[i], arrayY[i], 20, 20);
         }
