@@ -20,7 +20,6 @@ namespace L04_Interface {
         console.log(interfaceSquare);
         // hier Hintergrund speichern
         animate();
-
     }
 
     function animate(): void {
